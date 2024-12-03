@@ -681,6 +681,34 @@ require("lazy").setup({
 			local ensure_installed = vim.tbl_keys(servers or {})
 			vim.list_extend(ensure_installed, {
 				"stylua", -- Used to format Lua code
+				"bashls",
+				"html",
+				"yamlls",
+				"ast-grep",
+				"bashls",
+				"biome",
+				"checkstyle",
+				"format",
+				"clangd",
+				"cmake",
+				"cmakelang",
+				"cmakelint",
+				"cssls",
+				"cssmodules_ls",
+				"eslint",
+				"eslint_d",
+				"glint",
+				"harper_ls",
+				"html",
+				"htmlhint",
+				"jdtls",
+				"adapter",
+				"lemminx",
+				"lua_ls",
+				"lws_ls",
+				"quick_lint_ls",
+				"stylua",
+				"tailwindcss",
 			})
 			require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 
