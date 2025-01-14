@@ -697,7 +697,6 @@ require("lazy").setup({
 				"eslint",
 				"eslint_d",
 				"glint",
-				"harper_ls",
 				"html",
 				"htmlhint",
 				"jdtls",
