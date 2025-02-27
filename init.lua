@@ -468,6 +468,24 @@ require("lazy").setup({
 	{ "mfussenegger/nvim-jdtls", ft = { "java" } },
 	{ "mfussenegger/nvim-dap" },
 	{
+		"brenoprata10/nvim-highlight-colors",
+		config = function()
+			require("nvim-highlight-colors").setup({})
+		end,
+	},
+	{
+		"ziontee113/color-picker.nvim",
+		config = function()
+			require("color-picker").setup()
+			vim.api.nvim_set_keymap(
+				"n",
+				"<leader>cp",
+				"<cmd>PickColor<CR>",
+				{ noremap = true, silent = true, desc = "[C]olor [P]ick" }
+			)
+		end,
+	},
+	{
 		"nvim-neo-tree/neo-tree.nvim",
 		branch = "v3.x",
 		dependencies = {
@@ -708,6 +726,7 @@ require("lazy").setup({
 				"node-debug2-adapter",
 				"oxlint",
 				"typescript-language-server",
+				"cfn-lint",
 			})
 			require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 
@@ -1076,8 +1095,9 @@ require("lazy").setup({
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
 vim.cmd([[
-  set ts=2 sts=2 sw=2
   set ai si
+	set shiftwidth=4
+	set tabstop=2
   set rnu
   set number
   ]])
