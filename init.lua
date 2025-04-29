@@ -166,6 +166,17 @@ vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
 -- Diagnostic keymaps
 vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostic [Q]uickfix list" })
+vim.diagnostic.config({
+	virtual_text = {
+		prefix = "●", -- or '', '', etc from Nerd Font
+		spacing = 2,
+		severity = nil, -- show all levels
+	},
+	signs = true, -- show signs in the gutter
+	underline = true, -- underline errors
+	update_in_insert = false, -- update diagnostics in insert mode
+	severity_sort = true, -- sort by severity
+})
 
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
 -- for people to discover. Otherwise, you normally need to press <C-\><C-n>, which
@@ -484,6 +495,9 @@ require("lazy").setup({
 				{ noremap = true, silent = true, desc = "[C]olor [P]ick" }
 			)
 		end,
+	},
+	{
+		"equalsraf/neovim-gui-shim",
 	},
 	{
 		"nvim-neo-tree/neo-tree.nvim",
