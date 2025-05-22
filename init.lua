@@ -436,6 +436,7 @@ require("lazy").setup({
 			vim.keymap.set("n", "<leader>s.", builtin.oldfiles, { desc = '[S]earch Recent Files ("." for repeat)' })
 			vim.keymap.set("n", "<leader><leader>", builtin.buffers, { desc = "[ ] Find existing buffers" })
 			vim.keymap.set("n", "<leader>ff", builtin.current_buffer_fuzzy_find, { desc = "[F]uzzy [F]ind" })
+			vim.keymap.set("n", "<leader>fe", ":Explore<CR>", { desc = "[F]ile [E]xplore" })
 
 			-- Slightly advanced example of overriding default behavior and theme
 			vim.keymap.set("n", "<leader>/", function()
