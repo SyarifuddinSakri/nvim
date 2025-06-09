@@ -848,7 +848,7 @@ require("lazy").setup({
 			-- Function to check if the next character is a closing bracket
 			local function is_next_char_closing_bracket()
 				-- Define the set of closing brackets to check
-				local closing_brackets = { ")", "]", "}", ">", ";", "'", '"' }
+				local closing_brackets = { ")", "]", "}", ">", ";", "'", '"', ":" }
 
 				-- Get the current cursor position (row and column)
 				local row, col = unpack(vim.api.nvim_win_get_cursor(0))
