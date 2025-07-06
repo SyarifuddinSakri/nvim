@@ -513,6 +513,17 @@ require("lazy").setup({
 			vim.api.nvim_set_keymap("n", "\\", ":Neotree toggle<CR>", { noremap = true, silent = true })
 		end,
 	},
+
+	{
+		"kdheepak/lazygit.nvim",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+		},
+		cmd = { "LazyGit" },
+		keys = {
+			{ "<leader>gg", "<cmd>LazyGit<cr>", desc = "Open LazyGit" },
+		},
+	},
 	{
 		-- Main LSP Configuration
 		"neovim/nvim-lspconfig",
@@ -780,7 +791,7 @@ require("lazy").setup({
 				-- Disable "format_on_save lsp_fallback" for languages that don't
 				-- have a well standardized coding style. You can add additional
 				-- languages here or re-enable it for the disabled ones.
-				local disable_filetypes = { c = true, cpp = true }
+				local disable_filetypes = {}
 				local lsp_format_opt
 				if disable_filetypes[vim.bo[bufnr].filetype] then
 					lsp_format_opt = "never"
