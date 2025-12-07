@@ -437,6 +437,8 @@ require("lazy").setup({
 			vim.keymap.set("n", "<leader><leader>", builtin.buffers, { desc = "[ ] Find existing buffers" })
 			vim.keymap.set("n", "<leader>ff", builtin.current_buffer_fuzzy_find, { desc = "[F]uzzy [F]ind" })
 			vim.keymap.set("n", "<leader>fe", ":Explore<CR>", { desc = "[F]ile [E]xplore" })
+			vim.keymap.set("n", "<leader>rf", ":cd %:p:h<CR>", { desc = "Set CWD to Cu[R]rent [F]ile Dir" })
+			vim.keymap.set("n", "<leader>wr", ":vsp<CR>:term<CR>", { desc = "[W]e[R]tical Split Terminal" })
 
 			-- Slightly advanced example of overriding default behavior and theme
 			vim.keymap.set("n", "<leader>/", function()
@@ -749,7 +751,7 @@ require("lazy").setup({
 				"stylua",
 				"tailwindcss",
 				"chrome-debug-adapter",
-				"node-debug2-adapter",
+				"js-debug-adapter",
 				"oxlint",
 				"typescript-language-server",
 				"cfn-lint",
