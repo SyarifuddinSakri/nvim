@@ -750,11 +750,9 @@ require("lazy").setup({
 				"lua_ls",
 				"stylua",
 				"tailwindcss",
-				"chrome-debug-adapter",
 				"js-debug-adapter",
 				"oxlint",
 				"typescript-language-server",
-				"cfn-lint",
 			})
 			require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 
